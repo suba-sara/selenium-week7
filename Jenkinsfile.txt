@@ -1,0 +1,11 @@
+node {
+	stage ('SCM checkout'){
+		git "https://github.com/suba-sara/selenium-week7.git"
+		}
+	stage ('Build'){
+    	dir("comtest") {
+	   sh "mvn clean install"
+       }
+	}
+   
+}
